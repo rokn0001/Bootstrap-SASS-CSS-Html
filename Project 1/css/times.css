@@ -1,0 +1,196 @@
+:root {
+    --primary1: hsl(204, 70%, 50%);
+    --primary2: hsl(204, 79%, 20%);
+    --secondary1: hsl(314, 34%, 77%);
+    --secondary2: hsl(314, 69%, 16%);
+    --third1: hsl(0, 100%, 80%);
+    --third2: hsl(0, 70%, 16%);
+    --grey1: hsl(29, 10%, 30%);
+    --grey2: hsl(44, 8%, 50%);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    /*font-family: font stack required for body text */
+}
+
+h1, h2, h3, h4 {
+    font-size: 3rem;
+    font-family: 'Times New Roman', Times, serif;
+    /*font-family: font stack required for headings */
+}
+
+p {
+    font-size: 1rem;
+    margin: 1rem 0.5rem;
+    text-align: justify;
+}
+
+.container {
+    max-width: 1500px;
+    padding: 0px 50px;
+}
+
+.subnav {
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: row;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    display: flex;
+    padding-right: 20px;
+}
+
+.subnav a {
+    font-size: 1rem;
+    color: var(--third1);
+    text-shadow: 4px 6px 9px;
+    padding: 10px;
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.mainnav {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    display: flex;
+    padding-left: 20px;
+    background-color: var(--secondary1);
+    border-top: 20px inset var(--secondary2);
+}
+
+.mainnav a {
+    font-size: 1.5rem;
+    color: var(--secondary2);
+    text-shadow: 4px 6px 9px var(--secondary1);
+    width: 100%;
+    padding: 5px 15px 20px 15px;
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 1;
+    text-decoration: none;
+}
+nav>a:hover {
+    color: var(--grey2);
+  }
+.masthead {
+    max-width: 1500px;
+    margin: 1rem 1rem;
+    padding: 0rem 0.5rem;
+}
+
+.times-logo {
+    max-width: 1500px;
+    width: 100%;
+    position: relative;
+    overflow: auto;
+}
+
+.masthead h1 {
+    font-size: 3rem;
+    color: var(--secondary2);
+}
+
+.content {
+    font-size: 1rem;
+}
+
+.content .story {
+    color: black;
+}
+
+.story.lead-story {
+    font-weight: 600;
+}
+
+h1.story-title {
+    font-size: 2.5rem;
+    color: var(--third2);
+}
+
+.story img {
+    float: left;
+    height: auto;
+    margin: 0 50px 15px 0;
+    padding: 10px 10px 10px 10px;
+}
+
+.story p {
+    font-size: 1rem;
+    margin: 0 0.5rem;
+    padding: 0.6rem 0.5rem;
+}
+
+.story blockquote {
+    font-size: 1.3rem;
+    quotes: "\201E" "\201D";
+    padding: 10px;
+    margin: 0 10px 10px 20px;
+    color: var(--grey1);
+    font-weight: bold;
+}
+
+.story blockquote::before {
+    font-size: 1.1rem;
+    content: open-quote;
+}
+
+.story blockquote::after {
+    font-size: 1.1rem;
+    content: close-quote;
+}
+
+.story p.byline {
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+}
+
+p.byline span.author {
+    color: var(--primary2);
+}
+
+p.byline span.pub {
+    color: var(--primary1);
+}
+
+.foot {
+    padding: 1rem 2rem;
+    color: var(--grey2);
+}
+
+.foot p {
+    margin: 1rem 0;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+@media(max-width:600px) {
+    .mainnav {
+        font-size: 0.5rem;
+        flex-direction: column;
+    }
+    .masthead h1 {
+        font-size: 2rem;
+    }
+    h1.story-title {
+        font-size: 2rem;
+    }
+    .subnav {
+        padding: 10px;
+    }
+    .story img {
+        width: 100%;
+        height: auto;
+    }
+}
